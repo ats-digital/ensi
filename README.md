@@ -29,7 +29,7 @@ $ app/console doctrine:fixture:load
 
 ## Lancer la démo
 ```sh
-app/console server:start
+$ app/console server:start
 ```
 Maintenant rendez-vous sur le lien [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
