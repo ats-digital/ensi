@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - {{ product.name }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ product.name }}</h1>
+    <p>Back to <a href="{{ path('app_product_index') }}">products list</a></p>
+    <table border="0">
+        <tbody>
+            <tr>
+                <td>Id </td>
+                <td>: {{ product.id }}</td>
+            </tr>
+            <tr>
+                <td>Name </td>
+                <td>: {{ product.name }}</td>
+            </tr>
+            <tr>
+                <td>Description </td>
+                <td>: {{ product.description }}</td>
+            </tr>
+            <tr>
+                <td>Price </td>
+                <td>: {{ product.price|number_format(2, '.', ' ') }} €</td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td>
+                    {% if product.qte > 0 %}
+                        : {{ product.qte }}
+                    {% else %}
+                        : <span class="error">out of stock</span>
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    <table>
+    <p>
+        The product entity is defined in <code>src/AppBundle/Entity/Product.php</code>
+    </p>
+    <footer>
+        <p>
+            This page is rendred by the controller action <code>AppBundle:Product:show</code> located in the ProductController <code>src/AppBundle/Controller/ProductController.php</code>
+        </p>
+        <p>
+            For all your question you may contact us by email at Wajih's address: <a href="mailto:weriemi@ats-digital.com">wweriemi@ats-digital.com</a>
+        </p>
+    </footer>
+{% endblock %}

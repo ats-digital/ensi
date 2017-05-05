@@ -1,1 +1,18 @@
-Hello World!
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Home page
+{% endblock %}
+
+{% block body %}
+    <h1>Welcome</h1>
+    <p>Click on the link to see <a href="{{ path('app_product_index') }}">products list</a></p>
+    <footer>
+        <p>
+            This page is rendred by the default action <code>AppBundle:Default:index</code> located in the ProductController <code>src/AppBundle/Controller/DefaultController.php</code>
+        </p>
+        <p>
+            For all your question you may contact us by email at Wajih's address: <a href="mailto:weriemi@ats-digital.com">wweriemi@ats-digital.com</a>
+        </p>
+    </footer>
+{% endblock %}

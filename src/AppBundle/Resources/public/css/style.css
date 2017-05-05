@@ -1,0 +1,30 @@
+. {
+    color: #333;
+    font-size: 11px;
+}
+
+a {
+    color: #003366;
+}
+
+.error,
+.error a {
+    color: red;
+}
+
+code {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #555555;
+    font-style: italic;
+    padding: 5px 10px;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    font-size: 10px;
+}

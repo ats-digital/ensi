@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Liste des produits
+{% endblock %}
+
+{% block body %}
+    <h1>Liste des produits</h1>
+    <p>Back to <a href="{{ path('app_default_index') }}">home page</a></p>
+    <table border="0">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr class="{% if product.qte < 1 %}error{% endif %}">
+                    <td>{{ product.id }}</td>
+                    <td>
+                        <a href="{{ path('app_product_show', { id: product.id }) }}">{{ product.name }}</a>
+                    </td>
+                    <td>{{ product.price|number_format(2, '.', ' ') }} €</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <footer>
+        <p>
+            This page is rendred by the controller action <code>AppBundle:Product:index</code> located in the ProductController <code>src/AppBundle/Controller/ProductController.php</code>
+        </p>
+        <p>
+            For all your question you may contact us by email at Wajih's address: <a href="mailto:weriemi@ats-digital.com">wweriemi@ats-digital.com</a>
+        </p>
+    </footer>
+{% endblock %}
