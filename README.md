@@ -3,7 +3,7 @@
 Démo d'initiation au développement avec Symfony 2.
 
 ## Prérequis
-PHP >= 5.3
+PHP >= 5.3,
 Mysql Server >= 5.5
 
 Il faut d'abord installer le composer pour pouvoir installer la démo
